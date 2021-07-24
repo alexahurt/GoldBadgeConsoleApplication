@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoldBadgeConsoleApplication", "GoldBadgeConsoleApplication\GoldBadgeConsoleApplication.csproj", "{F7C05851-AC24-4341-86BE-09E9A4DB327B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeOne_ConsoleApp", "GoldBadgeConsoleApplication\ChallengeOne_ConsoleApp.csproj", "{F7C05851-AC24-4341-86BE-09E9A4DB327B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeOne_Repo", "ChallengeOne_Repo\ChallengeOne_Repo.csproj", "{1AEBB699-7D4B-4B7B-9DD2-0EBFC624E56E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeOne_RepoTest", "ChallengeOne_RepoTest\ChallengeOne_RepoTest.csproj", "{8F049907-866D-48D9-9359-C3924E44721C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{F7C05851-AC24-4341-86BE-09E9A4DB327B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7C05851-AC24-4341-86BE-09E9A4DB327B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7C05851-AC24-4341-86BE-09E9A4DB327B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AEBB699-7D4B-4B7B-9DD2-0EBFC624E56E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AEBB699-7D4B-4B7B-9DD2-0EBFC624E56E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AEBB699-7D4B-4B7B-9DD2-0EBFC624E56E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AEBB699-7D4B-4B7B-9DD2-0EBFC624E56E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F049907-866D-48D9-9359-C3924E44721C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F049907-866D-48D9-9359-C3924E44721C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F049907-866D-48D9-9359-C3924E44721C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F049907-866D-48D9-9359-C3924E44721C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
