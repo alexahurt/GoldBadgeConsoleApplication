@@ -13,11 +13,11 @@ namespace ChallengeOne_Repo
         public string MealName { get; set; }
         public string MealDescription { get; set; }
         public string MealIngrediants { get; set; }
-        public decimal MealPrice { get; set; }
+        public double MealPrice { get; set; }
 
         public MenuItems() { }
 
-        public MenuItems(int MealNumber, string MealName, string MealDescription, string MealIngrediants, decimal MealPrice)
+        public MenuItems(int mealNumber, string mealName, string mealDescription, string mealIngrediants, double mealPrice)
         {
             MealNumber = mealNumber;
             MealName = mealName;

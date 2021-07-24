@@ -20,6 +20,44 @@ namespace ChallengeOne_RepoTest
             Assert.AreEqual(expected, actual);
         }
 
-       
+        [TestMethod]
+        public void SetMealNumber_ShouldSetCorrectInt()
+        {
+            MenuItems item = new MenuItems();
+
+            item.MealNumber = 555;
+
+            int expected = 555;
+            int actual = item.MealNumber;
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void SetMealDescription_ShouldSetCorrectString()
+        {
+            MenuItems item = new MenuItems();
+
+            item.MealDescription = "A  big, chocolatey donut lihgtly glazed and filled with chocolate cream.";
+
+            string expected = "A  big, chocolatey donut lihgtly glazed and filled with chocolate cream.";
+            string actual = item.MealDescription;
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void SetMealIngrediants_ShouldSetCorrectString()
+        {
+            MenuItems item = new MenuItems();
+
+            item.MealIngrediants = "A  big, chocolatey donut lihgtly glazed and filled with chocolate cream.";
+
+            string expected = "A  big, chocolatey donut lihgtly glazed and filled with chocolate cream.";
+            string actual = item.MealDescription;
+
+            Assert.AreEqual(expected, actual);
+        }
+
     }
 }
