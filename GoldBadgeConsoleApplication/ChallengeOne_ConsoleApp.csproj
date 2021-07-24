@@ -43,11 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChallengeOne_Console.cs" />
+    <Compile Include="MenuItemsRepo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgramUI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChallengeOne_Repo\ChallengeOne_Repo.csproj">
+      <Project>{1AEBB699-7D4B-4B7B-9DD2-0EBFC624E56E}</Project>
+      <Name>ChallengeOne_Repo</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
