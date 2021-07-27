@@ -141,92 +141,95 @@ namespace GoldBadgeConsoleApplication
             //display said user if not null
             if (item != null)
             {
-                Console.WriteLine($"Name: {content.Name}\n" +
-                    $"Id Number: {content.IdNumber}\n" +
-                    $"Pluralsight Access: {content.PluralsightAccess}");
+                Console.WriteLine($"Meal Name: {item.MealName}\n" +
+                    $"Meal Number: {item.MealNumber}\n" +
+                    $"Meal Description: {item.MealDescription}\n" +
+                    $"Meal Ingredients: {item.MealIngrediants}\n" +
+                    $"Meal Price {item.MealPrice}";
             }
             else
             {
-                Console.WriteLine("No user by that name.");
+                Console.WriteLine("This meal does not currently exist.");
             }
         }
 
-        private DeveloperInfo GetContentByName(object name)
+        private MenuItems DisplayItemByName(object name)
         {
             throw new NotImplementedException();
         }
 
         //Update Existing Content
-        private void UpdateExistingContent()
+        private void UpdateExistingItem()
         {
             // display all content
-            DisplayAllContent();
+            DisplayAllItems();
             // ask for the name of the developer to update
-            Console.WriteLine("Enter the name of the developer you would like to update:");
+            Console.WriteLine("Enter the name of the meal that you would like to update: ");
             // get that name
-            string oldName = Console.ReadLine();
+            string oldMealName = Console.ReadLine();
 
             // build a new object
-            DeveloperInfo newContent = new DeveloperInfo();
+            MenuItems newItem = new MenuItems();
 
-            Console.WriteLine("Enter the name of the developer:");
-            newContent.Name = Console.ReadLine();
+            Console.WriteLine("Enter the name of the meal:");
+            newItem.MealName = Console.ReadLine();
 
-            Console.WriteLine("Enter the ID number for this developer:");
-            string idAsString = Console.ReadLine();
-            newContent.IdNumber = int.Parse(idAsString);
+            Console.WriteLine("Enter the meal number:");
+            string numberAsString = Console.ReadLine();
+            newItem.MealNumber = int.Parse(numberAsString);
 
-            Console.WriteLine("Does this developer have Pluralsight Access? (Yes or No)");
-            string pluralsightAccessString = Console.ReadLine().ToLower();
+            Console.WriteLine("Enter in the description of the meal: ");
+            newItem.MealDescription = Console.ReadLine();
 
-            if (pluralsightAccessString == "yes")
-            {
-                newContent.PluralsightAccess = true;
-            }
-            else
-            {
-                newContent.PluralsightAccess = false;
-            }
+            Console.WriteLine("Enter in the ingredients of the meal: ");
+            newItem.MealIngrediants = Console.ReadLine();
+
+            Console.WriteLine("Enter in the price of the meal: ");
+            string priceAsString = Console.ReadLine();
+            newItem.MealPrice = Convert.ToDouble(priceAsString);
+
+
 
             //verify
-            bool wasUpdated = _contentRepo.UpdateExistingContent(oldName, newContent);
+            bool wasUpdated = _itemRepo.UpdateExistingItem(oldMealName, newItem);
+
 
             if (wasUpdated)
             {
-                Console.WriteLine("Developer information was successfully updated.");
+                Console.WriteLine("This meal has been successfully updated!");
             }
             else
             {
-                Console.WriteLine("Could not update the information");
+                Console.WriteLine("This meal could not be updated");
             }
         }
 
         //Delete Existing Content
-        private void DeleteExistingContent()
+        private void DeleteExistingItem()
         {
 
 
-            DisplayAllContent();
+            DisplayAllItems();
 
 
             // get the name they want to delete
-            Console.WriteLine("\nEnter the name of the Developer that you would like to remove:");
+            Console.WriteLine("\nEnter the name of the meal that you would like to remove:");
 
             string input = Console.ReadLine();
 
             //call the delete method
-            bool wasDeleted = _contentRepo.RemoveContentFromList(input);
+            bool wasDeleted = _itemRepo.RemoveItemFromList(input);
 
 
             // if the content was deleted, say so
             // otherwise state it could not be deleted
             if (wasDeleted)
             {
-                Console.WriteLine("This Developer has been deleted from the database.");
+                Console.WriteLine("This meal has been deleted from the database.");
             }
             else
             {
-                Console.WriteLine("The Developer could not be deleted from the database.");
+                Console.WriteLine("The meal could not be deleted from the database.");
             }
 
 
