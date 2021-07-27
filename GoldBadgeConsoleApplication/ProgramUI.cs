@@ -104,7 +104,7 @@ namespace GoldBadgeConsoleApplication
             string priceAsString = Console.ReadLine();
             newItem.MealPrice = double.Parse(priceAsString);
 
-            _itemRepo.AddItemToList(newItem);
+            _itemRepo.AddItemsToList(newItem);
         }
 
 
@@ -145,7 +145,7 @@ namespace GoldBadgeConsoleApplication
                     $"Meal Number: {item.MealNumber}\n" +
                     $"Meal Description: {item.MealDescription}\n" +
                     $"Meal Ingredients: {item.MealIngrediants}\n" +
-                    $"Meal Price {item.MealPrice}";
+                    $"Meal Price {item.MealPrice}");
             }
             else
             {
@@ -249,11 +249,11 @@ namespace GoldBadgeConsoleApplication
 
 
 
-            _itemRepo.AddItemToList(chocolateDonut);
-            _itemRepo.AddItemToList(everythingBagel);
-            _itemRepo.AddItemToList(veggiePanini);
-            _itemRepo.AddItemToList(cinnamonStreuselMuffin);
-            _itemRepo.AddItemToList(cafeAuLait);
+            _itemRepo.AddItemsToList(chocolateDonut);
+            _itemRepo.AddItemsToList(everythingBagel);
+            _itemRepo.AddItemsToList(veggiePanini);
+            _itemRepo.AddItemsToList(cinnamonStreuselMuffin);
+            _itemRepo.AddItemsToList(cafeAuLait);
            
 
         }
