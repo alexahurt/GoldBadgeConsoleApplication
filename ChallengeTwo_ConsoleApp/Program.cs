@@ -10,6 +10,8 @@ namespace ChallengeTwo_ConsoleApp
     {
         static void Main(string[] args)
         {
+            ProgramUI program = new ProgramUI();
+            program.Run();
         }
     }
 }

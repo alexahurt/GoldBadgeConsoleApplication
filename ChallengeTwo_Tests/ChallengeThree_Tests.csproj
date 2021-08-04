@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{ECF2529A-7DB2-49FC-9B3A-8143E837C90F}</ProjectGuid>
+    <ProjectGuid>{CAE31960-D5C8-409D-A962-7D35358893B3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ChallengeTwo_RepoTests</RootNamespace>
-    <AssemblyName>ChallengeTwo_RepoTests</AssemblyName>
+    <RootNamespace>ChallengeTwo_Tests</RootNamespace>
+    <AssemblyName>ChallengeTwo_Tests</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -49,16 +49,17 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClaimsTests.cs" />
+    <Compile Include="Badges_Repo.cs" />
+    <Compile Include="BadgeTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ChallengeTwo_Repo\ChallengeTwo_Repo.csproj">
-      <Project>{e7b182bf-1cbc-4958-b469-0b419413a5b5}</Project>
-      <Name>ChallengeTwo_Repo</Name>
+    <ProjectReference Include="..\ChallengeThree_Rep\ChallengeThree_Rep.csproj">
+      <Project>{79112003-4d6b-4792-a9d7-ce8e355b3dda}</Project>
+      <Name>ChallengeThree_Rep</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

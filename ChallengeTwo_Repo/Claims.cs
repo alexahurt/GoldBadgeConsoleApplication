@@ -9,10 +9,12 @@ namespace ChallengeTwo_Repo
     //POCO
     public enum ClaimType
     {
-        Car,
+        Car =1,
         Home,
         Theft,
     }
+
+
     public class Claims
     {
         public int ClaimNumber { get; set; }
@@ -20,19 +22,31 @@ namespace ChallengeTwo_Repo
         public string ClaimDescription { get; set; }
         public double ClaimCost { get; set; }
 
+        public DateTime IncidentDate { get; set; }
+
         public DateTime ClaimDate { get; set; }
+
+
         public bool IsClaimValid { get; set; }
 
         public Claims() { }
 
-        public Claims(int claimNumber, ClaimType typeOfClaim, string claimDescription, double claimCost, DateTime claimDate, bool isClaimValid)
+        public Claims(int claimNumber, ClaimType typeOfClaim, string claimDescription, double claimCost, DateTime incidentDate, DateTime claimDate, bool isClaimValid)
         {
             ClaimNumber = claimNumber;
             TypeOfClaim = typeOfClaim;
             ClaimDescription = claimDescription;
             ClaimCost = claimCost;
+            IncidentDate = incidentDate;
             ClaimDate = claimDate;
             IsClaimValid = isClaimValid;
         }
+
+        public void ProcessClaim(int claimNumber, ClaimType typeOfClaim, string claimDescription, double claimCost, DateTime incidentDate, DateTime claimDate, bool isClaimValid)
+        {
+            Console.WriteLine($"Claim {ClaimNumber} processed!");
+        }
+
+        
     }
 }
