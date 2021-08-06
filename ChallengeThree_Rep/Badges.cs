@@ -14,10 +14,13 @@ namespace ChallengeThree_Rep
         public string BadgeName { get; set; }
 
         public string DoorName { get; set; }
+
+        public bool OtherDoors { get; set; }
+
         public Badges() { }
 
 
-        public Badges(int badgeID, string badgeName, string doorName)
+        public Badges(int badgeID, string badgeName, string doorName, bool otherDoors)
         {
             BadgeID = badgeID;
           
@@ -25,6 +28,7 @@ namespace ChallengeThree_Rep
 
             DoorName = doorName;
 
+            OtherDoors = otherDoors;
         }
 
         

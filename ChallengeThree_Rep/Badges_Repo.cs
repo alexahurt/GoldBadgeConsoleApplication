@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ChallengeThree_Rep
 {
-    class Badges_Repo
+    public class Badges_Repo
     {
 
         private List<Badges> _listOfBadges = new List<Badges>();
@@ -29,6 +29,13 @@ namespace ChallengeThree_Rep
         {
             _listOfBadges.Add(badge);
         }
+
+        public void AddDoorToBadge(Badges doorName)
+        {
+            _listOfBadges.Add(doorName);
+        }
+
+        
 
         //read all badge numbers and door access
 
@@ -58,9 +65,10 @@ namespace ChallengeThree_Rep
 
         //delete all doors from existing badge
 
-        public bool RemoveDoorsFromBadge (int badgeID)
+        public bool RemoveDoorsFromBadge (string doorName)
         {
-            Badges door = GetDoorByBadgeID(badgeID);
+
+            Badges door = new Badges();
 
             if (door == null)
             {
@@ -79,6 +87,7 @@ namespace ChallengeThree_Rep
                 return false;
             }
         }
+        
 
         //Helper method - get door name by badge ID
 

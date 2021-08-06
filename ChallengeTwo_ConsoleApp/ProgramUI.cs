@@ -149,7 +149,7 @@ namespace ChallengeTwo_ConsoleApp
 
             Console.WriteLine("Claim's Queue:");
 
-            Console.WriteLine("Claim one" + {one} );
+            /// Console.WriteLine("Claim one" + {one} );
            
             claimsQueue.Enqueue(one);
             
